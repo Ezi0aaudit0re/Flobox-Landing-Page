@@ -1,0 +1,97 @@
+html, body
+{
+	height: 100%;
+	margin: 0;
+	/*display: table;*/
+}
+.navbar
+{
+	opacity: 0.9;
+	text-align: center;
+}
+
+#banner{
+   margin-left: 30%;
+   color: #5bc0de;
+}
+
+/*Background Image*/
+
+
+#first-image
+{
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 100%;
+	background-image: url("./background.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+    padding-top: 10%;
+	
+}
+
+
+#bold{
+	font-family: 'Arvo', serif;
+	font-style: normal;
+	font-size: 57px;
+}
+
+#light{
+	font-family: 'Lato', serif;
+	font-style: italic;
+	font-size: 45px;
+}
+
+@keyframes animation{
+	from{margin-top: 0px;}
+	to {margin-top: 6px;}
+} 
+
+#arrow{
+	padding-top: 5%;
+	animation-name: animation;
+	animation-duration: .4s;
+	animation-iteration-count: 8;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+/*Info tag*/
+
+#info
+{
+	height: 50%;
+	font-family: 'Lato', serif;
+	font-size: 20px;
+}
+
+
+
+input{
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid black;
+	display: inline-block;
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+#about h2, #contact h2{
+	padding: 5px;
+	text-decoration: underline;
+}
+
+#contact{
+	padding-left: 5%;
+	border-left: 1px solid black;
+	min-height: 250px;
+}
+
