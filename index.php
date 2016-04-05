@@ -1,4 +1,7 @@
 <?php
+  session_start();
+
+  /*-- code for detecting mobile devides --*/
   require_once "Mobile_Detect.php";
   $detect = new Mobile_Detect;
 ?>
@@ -35,7 +38,7 @@
                 if(!$detect->isMobile()) 
                 {
             ?>
-            <h5 id="banner" class="navbar-text">JOIN TODAY TO WIN A YEAR’S FREE SUBSCRIPTION! </h5>
+            <h5 id="banner" class="navbar-text">JOIN TODAY TO WIN A YEAR’S FREE SUBSCRIPTION ! </h5>
             <?php } ?>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -46,8 +49,8 @@
         </div>    
     </nav>
     <?php if($detect->isMobile()) { ?>
-        <div class="navbar navbar-fixed-bottom navbar-inverse" >
-            <h5 style="color: #5bc0de" class="navbar-text">JOIN TODAY TO WIN A YEAR’S FREE SUBSCRIPTION! </h5>
+        <div class="navbar navbar-fixed-bottom navbar-inverse footer" >
+                <h5 style="color: #5bc0de">JOIN TODAY TO WIN A YEAR’S FREE SUBSCRIPTION ! </h5>
         </div> 
     <?php }?>    
   <!-- Background image div !-->
@@ -59,14 +62,27 @@
             {
             ?>
             <span id="light">Your monthly surprise for body and mind. </span><br>
-            <?php } ?>
+            <?php } 
+
+            if(!isset($_SESSION["message"]))    
+            {
+            ?>    
             <div id="form">
-                <form action="#" method='post'>
-                    <input type="text" placeholder="FULL NAME"><br>
-                    <input type="email" placeholder="EMAIL"><br>
+                <form action="./mailgun_validations/validation.php" method='post'>
+                    <input type="text" placeholder="FULL NAME" name="name"><br>
+                    <input type="email" placeholder="EMAIL" name="email"><br>
                     <input type="submit" class="btn btn-info" style="font-size: 20px;">
                 </form> 
             </div>
+            <? } 
+            else
+            { ?>
+             <div class="alert alert-success">
+                    <h3> <?=$_SESSION["message"]?> </h3>
+             </div>   
+            <? 
+             session_destroy();   
+            } ?>
         </div>      
         <div id="arrow">
             <img src="./scrool.png" height="60px" width="60px">

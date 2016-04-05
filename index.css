@@ -15,7 +15,7 @@ html, body
    color: #5bc0de;
 }
 
-/*Background Image*/
+/*Background Image and form tags */
 
 
 #first-image
@@ -58,6 +58,15 @@ html, body
 	animation-timing-function: linear;
 }
 
+.alert{
+	max-height: 10%;
+	width: 350px;
+	opacity: 0.9;
+	color: black;
+	margin: 0 auto;
+	padding: 5px;
+	margin-top: 2%;
+}
 /*Info tag*/
 
 #info
@@ -95,3 +104,7 @@ input{
 	min-height: 250px;
 }
 
+.footer h4
+{
+ text-align: right;
+}
