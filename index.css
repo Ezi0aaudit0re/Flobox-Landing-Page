@@ -23,7 +23,7 @@ html, body
 
 @media only screen and (max-width: 768px)
 {
-	/* For IPAD  */
+	/* For IPAD  and Iphone*/
 	#first-image
 	{
 		background-image: url("./background_phone.png");
