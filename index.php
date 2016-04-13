@@ -13,6 +13,8 @@
     <title>Flobox</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Flobox is a women empowerment startup that helps women pamper themself during there time of the month">
+    <meta name="author" description="Aman Nagpal Github - https://github.com/Ezi0aaudit0re">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
