@@ -4,6 +4,8 @@ html, body
 	margin: 0;
 	/*display: table;*/
 }
+
+
 .navbar
 {
 	opacity: 0.9;
@@ -17,23 +19,9 @@ html, body
 
 /*Background Image and form tags */
 
-@media only screen and (max-width: 600px)
-{
-	/* For phone */
-	[id = first-image]
-	{
-		background-image: url("./background_phone.png");
-		background-size: cover;
-		height: 100%;
-		background-position: center; /* for android devices */
-		background-repeat: no-repeat;
-		text-align: center;
-	    padding-top: 20%;
-		
-	}
-}
 
-@media only screen and (min-width: 768px)
+
+@media only screen and (max-width: 768px)
 {
 	/* For IPAD  */
 	#first-image
@@ -54,7 +42,8 @@ html, body
 	/* For Desktop */
 	#first-image
 	{
-		/*background-image: url("./background_full.jpg");*/
+		/*background-color: red;*/
+		background-image: url("./background_full.jpg");
 		background-size: 100%;
 		background-attachment: fixed;
 		height: 100%;	
@@ -139,6 +128,7 @@ input{
 	padding-left: 5%;
 	border-left: 1px solid black;
 	min-height: 250px;
+	margin-bottom: 20px;
 }
 
 .footer h4

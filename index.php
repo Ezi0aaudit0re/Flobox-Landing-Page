@@ -15,6 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(this).scroll(function()
+            {
+                $('.footer').hide();
+                if(!($(this).scrollTop() > 100))
+                    $('.footer').show();      
+            });
+        })
+
+    </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arvo">
@@ -22,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Delicious">
 </head>
 <body>
+    <!-- Background image div !-->
   <div id="first-image">
         <div id="name">
             <span id="bold">FloBox:</span><br>
@@ -88,7 +100,7 @@
                 <h5 style="color: #5bc0de">JOIN TODAY TO WIN A YEAR’S FREE SUBSCRIPTION ! </h5>
         </div> 
     <?php }?>    
-  <!-- Background image div !-->
+  
     
   
     
@@ -103,7 +115,7 @@
         <div class="col-md-5 <?php if(!$detect->isMobile()) echo "pull-right"; ?>" id="contact">
             <h2>Contact us</h2>
             <p>Drop us an email at</p>
-            
+            <a href="mailto:xyz@xyz.com?Subject=Hello" target="_top">Send Mail</a>
         </div>
    </div>     
 
